@@ -1,0 +1,504 @@
+body {
+    font: 14px Helvetica;
+    display: flex;
+    flex-direction: column;
+    background: #B5D6D8;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #B5D5DD, #B8DBCC);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #B5D5DD, #B8DBCC);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #B5D5DD, #B8DBCC);
+    /* ForFirefox 3.6 to 15 */
+    background: linear-gradient(to right, #B5D5DD, #B8DBCC);
+    /* Standard syntax */
+    opacity: 1;
+    transition: 2s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+h2 {
+    text-align: center;
+    font-family: Palatino Linotype;
+}
+
+p {
+    text-align: center;
+}
+
+ul.navi {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    margin: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+
+/* Change the link color on hover */
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+#main {
+    min-height: 800px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+}
+
+#main>article {
+    margin: 4px;
+    padding: 5px;
+    border: 0px solid #cccc33;
+    border-radius: 7pt;
+    background: rgb(255, 255, 255);
+    flex: 3 1 60%;
+    order: 2;
+}
+
+#main>nav {
+    margin: 4px;
+    padding: 5px;
+    border: 0px solid #8888bb;
+    border-radius: 7pt;
+    background: #FFFCE0;
+    flex: 1 6 20%;
+    order: 1;
+}
+
+#main>aside {
+    margin: 4px;
+    padding: 5px;
+    border: 0px solid #8888bb;
+    border-radius: 7pt;
+    background: #FFFFFF;
+    flex: 1 6 20%;
+    order: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    margin: 3px;
+    padding: 7px;
+    min-height: 100px;
+    border: 0px solid #eebb55;
+    border-radius: 7pt;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    padding: 7px;
+    min-height: 50px;
+    border: 0px solid #eebb55;
+    border-radius: 7pt;
+    background: #F0F0F0;
+}
+
+.accodion-panel {
+    display: none;
+}
+
+
+/* Too narrow to support three columns */
+
+@media all and (max-width: 200px) {
+    #main,
+    #page {
+        flex-direction: column;
+    }
+    #main>article,
+    #main>nav,
+    #main>aside {
+        /* Return them to document order */
+        order: 0;
+    }
+    #main>nav,
+    #main>aside,
+    header,
+    footer {
+        min-height: 30px;
+        max-height: 700px;
+    }
+}
+
+
+
+.accordion-panel {
+    display: none;
+    padding: 10px;
+}
+
+.accordion-control {
+    width: 100%;
+    border-radius: 10px;
+    background: #FFFFFF;
+    margin-bottom: 5px;
+    height: 60px;
+    border: 1px solid #004D80;
+    padding: 10px;
+    font-weight: bold;
+    font-style: Palatino Linotype;
+}
+
+.accordion-control:hover {
+    background-color: #ddd;
+}
+
+.pie {
+    font-style: italic;
+    margin: auto;
+}
+
+.lado {
+    font-size: 10px;
+    margin: 20px 20px 20px 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* The actual popup */
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #A7CCE6;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+/* Popup arrow */
+
+.bgimg {
+    height: 40%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #43835E;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+    flex-direction: column;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    color: lightblue;
+    flex-direction: column;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    color: red;
+    flex-direction: column;
+}
+
+.middle {
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* The actual popup */
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #A7CCE6;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+/* Popup arrow */
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #A2D1DD transparent transparent transparent;
+}
+
+
+/* Toggle this class - hide and show the popup */
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 2.5s;
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*style for modal FORM  */
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: white;
+    color: white;
+}
+
+.modal-body {
+    padding: 10px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5F7FA1;
+    color: white;
+}
+
+#myBtn {
+    color: red;
+    background: #EEECEC;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+}
+
+.help {
+    font-family: 'Lobster', cursive;
+    color:#1a5ea7;
+    font-size: 15px;
+    margin-left: 135px;
+    margin-top: 30px;
+}
+
+.top-header {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: black;
+}
+
+.fa {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    float: right;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    float: right;
+    margin-right: 25px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    float: right;
+}
+
+.fa-rss {
+    background: #ff6600;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    float: right;
+}

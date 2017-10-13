@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UMOS - Workforce Development</title>
+    <link rel="stylesheet" type: "text/css" href="style.css">
+    <script src="jquery-3.2.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body>
+    <script>
+        document.body.className += ' fade-out';
+    </script>
+    <header>
+
+        <div class="top-header">
+            <a href="https://www.facebook.com/pg/umosinc/posts/?ref=page_internal" class="fa fa-facebook" style="display:inline-flex"
+                target="_blank"></a>
+            <a href="https://twitter.com/TechHire?lang=en" class="fa fa-twitter" style="display:inline-flex" target="_blank"></a>
+            <a href="#" class="fa fa-rss"></a>
+        </div>
+
+
+
+        <div style="display:-webkit-inline-flex;margin-top:28px;">
+            <img src="./images/umoslogo.png">
+
+        </div>
+
+        <div class="help">
+            <h1>
+                Helping to bring TECH to our communities
+            </h1>
+        </div>
+
+
+    </header>
+
+    <div id='main'>
+
+        <!--Center of the Webpage-->
+
+        <article>
+
+            <h2>
+                About Workforce Development
+            </h2>
+
+            <img src="./images/workf.jpg" style="margin:10px; width:20%; float:left; margin-right:30px; border-radius:10px">
+            <br>
+            <p style="text-align:left; font-style:italic; margin:auto; padding:15px">
+                UMOS remains committed to developing and advancing Wisconsin's workforce to meet employer expectations. UMOS believes a comprehensive
+                approach to workforce development means substantial employer engagement, deep community connections, career
+                advancement, human service supports, industry-driven education and training, and the connective tissue of
+                connected networks. UMOS' Workforce Development Division provides a number of programs that operate in Wisconsin,
+                Missouri, and Florida
+
+            </p>
+
+        </article>
+
+        <nav>
+            <ul class="navi">
+                <li><a href="index.html">TechHire</a></li>
+                <li><a href="workforce.html">Work Force</a></li>
+                <li><a href="miljob.html">Milwaukee Job Center</a></li>
+                <li><a href="csoon2w.html">Wisconsin Works (W-2)</a></li>
+                <li><a href="csoon2t.html">Transitional Jobs</a></li>
+                <li><a href="csoon2n.html">National Farmerworkers Jobs</a></li>
+
+
+                </a>
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <h2>
+                Individualized Trainning Techniques
+            </h2>
+            <p>
+                <span class="popup" onclick="popUmos()" style="color:#5173A0"> <strong><u>UMOS</u></strong>
+                    <span class="popuptext" id="myPopup">United Migrant Organization Services</span>
+                </span>
+                <script>
+                    function popUmos() {
+                        var popup = document.getElementById("myPopup");
+                        popup.classList.toggle("show");
+                    }
+                </script>
+
+
+                recognizes that all participants do not learn in the same way. Therefore, the program offers various individualized training
+                techniques that will be more productive and comfortable for participants, including:
+                <ul style="list-style-type:circle">
+                    <li>Virtual training from any location with an internet connection</li><br>
+                    <li> Remote instructional and coaching support</li><br>
+                    <li>Web conferencing</li><br>
+                    <li>Face-to-face facilitated training workgroup sessions in the UMOS Technology Center in Milwaukee, Wisconsin</li><br>
+                    <li>Classroom instructor-led sessions through collaboration with the College of MenomInee Nation in Keshena
+                        and Green Bay, Wisconsin.</li><br>
+                </ul>
+                <div>
+                    <button id="myBtn">JOIN US</button>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times;</span>
+                                <img src="./images/umoslogo.png" style="padding:20px;" />
+                            </div>
+                            <div class="modal-body">
+                                <form action="/action_page.php">
+                                    First Name<br>
+                                    <input type="text" name="firstname" value="" style="border-radius: 5px"><br><br> Last
+                                    Name
+                                    <br>
+                                    <input type="text" name="lastname" value="" style="border-radius: 5px"><br><br> Email
+                                    Address
+                                    <br>
+                                    <input type="email" name="email" value="" style="border-radius: 5px"><br><br> Telephone
+                                    <br>
+                                    <input type="tel" name="usrtel" value="" style="border-radius: 5px"><br><br> Comments
+                                    <br>
+                                    <textarea rows="4" cols="30" name="comment" maxlength="500" style="border-radius: 5px"></textarea><br><br>
+                                    <input type="submit">
+                                </form>
+                            </div>
+                            <script>
+                                // Get the modal
+                                var modal = document.getElementById('myModal');
+
+                                // Get the button that opens the modal
+                                var btn = document.getElementById("myBtn");
+
+                                // Get the <span> element that closes the modal
+                                var span = document.getElementsByClassName("close")[0];
+
+                                // When the user clicks the button, open the modal 
+                                btn.onclick = function () {
+                                    modal.style.display = "block";
+                                }
+
+                                // When the user clicks on <span> (x), close the modal
+                                span.onclick = function () {
+                                    modal.style.display = "none";
+                                }
+
+                                // When the user clicks anywhere outside of the modal, close it
+                                window.onclick = function (event) {
+                                    if (event.target == modal) {
+                                        modal.style.display = "none";
+                                    }
+                                }
+                            </script>
+            </p>
+
+        </aside>
+        </div>
+
+        <footer>
+            <p class="pie">For more information, call 414-389-6000, or click <a href="http://www.umos.org/corporate/mailing_list_signup.html">here.</a>&nbsp
+                &#169 UMOS All Rights Reserved</p>
+        </footer>
+        <script>
+            $(function () {
+                $('body').removeClass('fade-out');
+            });
+        </script>
+</body>
+
+</html>

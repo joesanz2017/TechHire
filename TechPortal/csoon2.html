@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>UMOS - Under Construction</title>
+      <link rel="stylesheet" type:"text/css" href="style.css">
+      <script src="jquery-3.2.1.js"></script>
+      
+      </head>
+    
+  </head>
+  <body>
+        
+    <header>
+        
+            <div style="display:-webkit-inline-flex">
+                    <img src="./images/umoslogo.png">
+                    
+                </div>
+                
+        
+        </header>
+    </header>
+    <div id='main'>
+      
+      <!--Center of the Webpage-->
+      
+        <article>
+
+            <div>
+                <h4 style="color:red;padding:40px;text-align:center">
+                    UNDER CONSTRUCTION
+                </h4>
+                <br><br<
+                
+                        </div>
+                
+                        <div class="bgimg">
+                            <div class="topleft">
+                              <p></p>
+                            </div>
+                            <div class="middle">
+                              <h1>COMING SOON</h1>
+                              <hr>
+                              <br>
+                    <br>
+                    <p id="demo" style="font-size:15pxpx; color: green;"></p>
+                  </div>
+                  
+                </div>
+                </article>
+                <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Oct 20, 2017 15:37:25").getTime();
+                
+                // Update the count down every 1 second
+                var countdownfunction = setInterval(function() {
+                
+                    // Get todays date and time
+                    var now = new Date().getTime();
+                    
+                    // Find the distance between now an the count down date
+                    var distance = countDownDate - now;
+                    
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                    // Output the result in an element with id="demo"
+                    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+                    
+                    // If the count down is over, write some text 
+                    if (distance < 0) {
+                        clearInterval(countdownfunction);
+                        document.getElementById("demo").innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+                </script>
+                
+            
+
+
+
+      </article>
+
+      <nav>
+          <ul class="navi">
+                <li><a href="index.html">TechHire</a></li>  
+            <li><a href="workforce.html">Work Force</a></li>
+            <li><a href="miljob.html">Milwaukee Job Center</a></li>
+            <li><a href="#">Wisconsin Works (W-2)</a></li>
+            <li><a href="#">Transitional Jobs</a></li>
+           <li><a href="#">National Farmerworkers Jobs</a></li>
+                
+            </a></li>
+          </ul>
+        </nav>
+      <aside>
+        <h2>
+            Individualized Trainning Techniques
+        </h2>
+        <p>
+                UMOS recognizes that all participants do not learn in the same way. Therefore, the program offers various individualized training techniques that will be more productive and comfortable for participants, including:
+                <ul style="list-style-type:circle">
+                    <li>Virtual training from any location with an internet connection</li><br>
+                    <li> Remote instructional and coaching support</li><br>
+                    <li>Web conferencing</li><br>
+                    <li>Face-to-face facilitated training workgroup sessions in the UMOS Technology Center in Milwaukee, Wisconsin</li><br>
+                    <li>Classroom instructor-led sessions through collaboration with the College of MenomInee Nation in Keshena and Green Bay, Wisconsin.</li><br>
+                </ul>
+                  
+        </p>
+            </aside>
+           </div>
+
+    <footer>
+        <p class="pie">For more information, call 414-389-6000, or click <a href="http://www.umos.org/corporate/mailing_list_signup.html">here.</a>&nbsp &#169 UMOS All Rights Reserved</p> </footer>
+        
+    </body>
+</html>
